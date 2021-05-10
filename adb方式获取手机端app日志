@@ -1,0 +1,11 @@
+adb方式获取手机端app日志：
+第一步，手机连接电脑，打开开发者模式，调整模式
+第二步，找到adb应用所在位置，输入cmd(我的位置在D:\program file\android-sdk_r24.4.1-windows\android-sdk-windows\platform-tools)
+第三步，查找当前连接的device，通过adb devices命令可以看到当前连接的手机
+	adb devicves
+第四步，在电脑里新建一个log空白文件
+第五步，在控制台输入命令adb logcat -c   用于清除之前存留的log日志存量数据
+第六步，输入命令 adb logcat -v time >新建的log文件
+第七步，回车后就可以再手机上进行操作app了，当要进行终止的时候，再控制台按键CTRL+C即可终止，此时log文件中已生成日志
+
+

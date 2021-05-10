@@ -1,0 +1,5 @@
+adb方式获取手机端系统日志
+第一步，查找当前连接的device，通过adb devices命令可以看到当前连接的手机：adb devices
+第二步，adb shell 连接到shell:adb shell
+第三步，连接上shell后，就可以过滤logcat了 ：logcat | grep "tag" 
+第四步，adb 获取logcat并保存到本地：adb logcat >文件名.log
